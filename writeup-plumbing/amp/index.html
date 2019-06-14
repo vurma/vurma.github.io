@@ -1,7 +1,8 @@
+
 <head>
     <meta charset="utf-8">
 
-    <title>Managing admin settings</title>
+    <title>Nixu 2019 CTF Writeup: Plumbing</title>
 
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -10,31 +11,32 @@
     <link rel="canonical" href="../index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
     
-    <meta property="og:site_name" content="e.kallman">
+    <meta property="og:site_name" content="Project Journal">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Managing admin settings">
-    <meta property="og:description" content="There are a couple of things to do next while you're getting set up: making your site private and inviting your team.">
-    <meta property="og:url" content="http://localhost:2368/admin-settings/">
-    <meta property="og:image" content="https://static.ghost.org/v2.0.0/images/admin-settings.jpg">
-    <meta property="article:published_time" content="2019-03-18T13:46:16.000Z">
-    <meta property="article:modified_time" content="2019-03-18T13:46:14.000Z">
-    <meta property="article:tag" content="Getting Started">
+    <meta property="og:title" content="Nixu 2019 CTF Writeup: Plumbing">
+    <meta property="og:description" content="In this particular challenge, we need to take a deeper-than-average dive into how Git builds its commit messages. Super cool, and pretty simple. ">
+    <meta property="og:url" content="http://localhost:2368/writeup-plumbing/">
+    <meta property="og:image" content="http://localhost:2368/content/images/2019/06/62475375_353452692028097_5273843763561627648_n.jpg">
+    <meta property="article:published_time" content="2019-06-14T09:48:44.000Z">
+    <meta property="article:modified_time" content="2019-06-14T11:14:22.000Z">
+    <meta property="article:tag" content="Nixu">
+    <meta property="article:tag" content="Write-up">
+    <meta property="article:tag" content="CTF">
+    <meta property="article:tag" content="cyber security">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
-    <meta property="article:author" content="https://www.facebook.com/ghost">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Managing admin settings">
-    <meta name="twitter:description" content="There are a couple of things to do next while you're getting set up: making your site private and inviting your team.">
-    <meta name="twitter:url" content="http://localhost:2368/admin-settings/">
-    <meta name="twitter:image" content="https://static.ghost.org/v2.0.0/images/admin-settings.jpg">
+    <meta name="twitter:title" content="Nixu 2019 CTF Writeup: Plumbing">
+    <meta name="twitter:description" content="In this particular challenge, we need to take a deeper-than-average dive into how Git builds its commit messages. Super cool, and pretty simple. ">
+    <meta name="twitter:url" content="http://localhost:2368/writeup-plumbing/">
+    <meta name="twitter:image" content="http://localhost:2368/content/images/2019/06/62475375_353452692028097_5273843763561627648_n.jpg">
     <meta name="twitter:label1" content="Written by">
-    <meta name="twitter:data1" content="Ghost">
+    <meta name="twitter:data1" content="Erik Källman">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Getting Started">
-    <meta name="twitter:site" content="tryghost">
-    <meta name="twitter:creator" content="tryghost">
-    <meta property="og:image:width" content="1600">
-    <meta property="og:image:height" content="1067">
+    <meta name="twitter:data2" content="Nixu, Write-up, CTF, cyber security">
+    <meta name="twitter:site" content="@tryghost">
+    <meta property="og:image:width" content="1440">
+    <meta property="og:image:height" content="910">
     
     <script type="application/ld+json">
 {
@@ -42,37 +44,38 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": "e.kallman",
-        "logo": "https://static.ghost.org/v1.0.0/images/ghost-logo.svg"
+        "name": "Project Journal",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 60,
+            "height": 60
+        }
     },
     "author": {
         "@type": "Person",
-        "name": "Ghost",
+        "name": "Erik Källman",
         "image": {
             "@type": "ImageObject",
-            "url": "https://static.ghost.org/v2.0.0/images/ghost.png",
-            "width": 400,
-            "height": 400
+            "url": "http://localhost:2368/content/images/2019/06/full_image.jpeg",
+            "width": 435,
+            "height": 580
         },
-        "url": "http://localhost:2368/author/ghost/",
-        "sameAs": [
-            "https://ghost.org",
-            "https://www.facebook.com/ghost",
-            "https://twitter.com/tryghost"
-        ]
+        "url": "http://localhost:2368/author/ekallman/",
+        "sameAs": []
     },
-    "headline": "Managing admin settings",
-    "url": "http://localhost:2368/admin-settings/",
-    "datePublished": "2019-03-18T13:46:16.000Z",
-    "dateModified": "2019-03-18T13:46:14.000Z",
+    "headline": "Nixu 2019 CTF Writeup: Plumbing",
+    "url": "http://localhost:2368/writeup-plumbing/",
+    "datePublished": "2019-06-14T09:48:44.000Z",
+    "dateModified": "2019-06-14T11:14:22.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "https://static.ghost.org/v2.0.0/images/admin-settings.jpg",
-        "width": 1600,
-        "height": 1067
+        "url": "http://localhost:2368/content/images/2019/06/62475375_353452692028097_5273843763561627648_n.jpg",
+        "width": 1440,
+        "height": 910
     },
-    "keywords": "Getting Started",
-    "description": "There are a couple of things to do next while you&#x27;re getting set up: making your site private and inviting your team.",
+    "keywords": "Nixu, Write-up, CTF, cyber security",
+    "description": "In this particular challenge, we need to take a deeper-than-average dive into how Git builds its commit messages. Super cool, and pretty simple. ",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -81,7 +84,7 @@
     </script>
 
     <meta name="generator" content="Ghost 2.18">
-    <link rel="alternate" type="application/rss+xml" title="e.kallman" href="../../rss/index.html">
+    <link rel="alternate" type="application/rss+xml" title="Project Journal" href="../../rss/index.html">
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,600,400">
     <style amp-custom>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{margin:0.67em 0;font-size:2em}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{position:relative;vertical-align:baseline;font-size:75%;line-height:0}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}amp-img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{margin:0;color:inherit;font:inherit}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{margin:0 2px;padding:0.35em 0.625em 0.75em;border:1px solid #c0c0c0}legend{padding:0;border:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-spacing:0;border-collapse:collapse}td,th{padding:0}html{max-height:100%;height:100%;font-size:62.5%;-webkit-tap-highlight-color:rgba(0, 0, 0, 0)}body{max-height:100%;height:100%;color:#3a4145;background:#f4f8fb;letter-spacing:0.01rem;font-family:"Merriweather", serif;font-size:1.8rem;line-height:1.75em;text-rendering:geometricPrecision;-webkit-font-feature-settings:"kern" 1;-moz-font-feature-settings:"kern" 1;-o-font-feature-settings:"kern" 1}::-moz-selection{background:#d6edff}::selection{background:#d6edff}h1,h2,h3,h4,h5,h6{margin:0 0 0.3em 0;color:#2e2e2e;font-family:"Open Sans", sans-serif;line-height:1.15em;text-rendering:geometricPrecision;-webkit-font-feature-settings:"dlig" 1, "liga" 1, "lnum" 1, "kern" 1;-moz-font-feature-settings:"dlig" 1, "liga" 1, "lnum" 1, "kern" 1;-o-font-feature-settings:"dlig" 1, "liga" 1, "lnum" 1, "kern" 1}h1{text-indent:-2px;letter-spacing:-1px;font-size:2.6rem}h2{letter-spacing:0;font-size:2.4rem}h3{letter-spacing:-0.6px;font-size:2.1rem}h4{font-size:1.9rem}h5{font-size:1.8rem}h6{font-size:1.8rem}a{color:#4a4a4a}a:hover{color:#111}p,ul,ol,dl{margin:0 0 2.5rem 0;font-size:1.5rem;text-rendering:geometricPrecision;-webkit-font-feature-settings:"liga" 1, "onum" 1, "kern" 1;-moz-font-feature-settings:"liga" 1, "onum" 1, "kern" 1;-o-font-feature-settings:"liga" 1, "onum" 1, "kern" 1}ol,ul{padding-left:2em}ol ol,ul ul,ul ol,ol ul{margin:0 0 0.4em 0;padding-left:2em}dl dt{float:left;clear:left;overflow:hidden;margin-bottom:1em;width:180px;text-align:right;text-overflow:ellipsis;white-space:nowrap;font-weight:700}dl dd{margin-bottom:1em;margin-left:200px}li{margin:0.4em 0}li li{margin:0}hr{display:block;margin:1.75em 0;padding:0;height:1px;border:0;border-top:#efefef 1px solid}blockquote{box-sizing:border-box;margin:1.75em 0 1.75em 0;padding:0 0 0 1.75em;border-left:#4a4a4a 0.4em solid;-moz-box-sizing:border-box}blockquote p{margin:0.8em 0;font-style:italic}blockquote small{display:inline-block;margin:0.8em 0 0.8em 1.5em;color:#ccc;font-size:0.9em}blockquote small:before{content:"\2014 \00A0"}blockquote cite{font-weight:700}blockquote cite a{font-weight:normal}mark{background-color:#fdffb6}code,tt{padding:1px 3px;border:#e3edf3 1px solid;background:#f7fafb;border-radius:2px;white-space:pre-wrap;font-family:Inconsolata, monospace, sans-serif;font-size:0.85em;font-feature-settings:"liga" 0;-webkit-font-feature-settings:"liga" 0;-moz-font-feature-settings:"liga" 0}pre{overflow:auto;box-sizing:border-box;margin:0 0 1.75em 0;padding:10px;width:100%;border:#e3edf3 1px solid;background:#f7fafb;border-radius:3px;white-space:pre;font-family:Inconsolata, monospace, sans-serif;font-size:0.9em;-moz-box-sizing:border-box}pre code,pre tt{padding:0;border:none;background:transparent;white-space:pre-wrap;font-size:inherit}kbd{display:inline-block;margin-bottom:0.4em;padding:1px 8px;border:#ccc 1px solid;background:#f4f4f4;border-radius:4px;box-shadow:0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;color:#666;text-shadow:#fff 0 1px 0;font-size:0.9em;font-weight:700}table{box-sizing:border-box;margin:1.75em 0;max-width:100%;width:100%;background-color:transparent;-moz-box-sizing:border-box}table th,table td{padding:8px;border-top:#efefef 1px solid;vertical-align:top;text-align:left;line-height:20px}table th{color:#000}table caption + thead tr:first-child th,table caption + thead tr:first-child td,table colgroup + thead tr:first-child th,table colgroup + thead tr:first-child td,table thead:first-child tr:first-child th,table thead:first-child tr:first-child td{border-top:0}table tbody + tbody{border-top:#efefef 2px solid}table table table{background-color:#fff}table tbody > tr:nth-child(odd) > td,table tbody > tr:nth-child(odd) > th{background-color:#f6f6f6}table.plain tbody > tr:nth-child(odd) > td,table.plain tbody > tr:nth-child(odd) > th{background:transparent}iframe,amp-iframe,.fluid-width-video-wrapper{display:block;margin:1.75em 0}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper amp-iframe{margin:0}textarea,select,input{margin:0 0 5px 0;padding:6px 9px;width:260px;outline:0;border:#e7eef2 1px solid;background:#fff;border-radius:4px;box-shadow:none;font-family:"Open Sans", sans-serif;font-size:1.6rem;line-height:1.4em;font-weight:100;-webkit-appearance:none}textarea{min-width:250px;min-height:80px;max-width:340px;width:100%;height:auto}input[type="text"]:focus,input[type="email"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="number"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,textarea:focus{outline:none;outline-width:0;border:#bbc7cc 1px solid;background:#fff}select{width:270px;height:30px;line-height:30px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.main-header{position:relative;display:table;overflow:hidden;box-sizing:border-box;width:100%;height:50px;background:#5ba4e5 no-repeat center center;background-size:cover;text-align:left;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}.content{background:#fff;padding-top:15px}.blog-title,.content{margin:auto;max-width:600px}.blog-title a{display:block;padding-right:16px;padding-left:16px;height:50px;color:#fff;text-decoration:none;font-family:"Open Sans", sans-serif;font-size:16px;line-height:50px;font-weight:600}.post{position:relative;margin-top:0;margin-right:16px;margin-left:16px;padding-bottom:0;max-width:100%;border-bottom:#ebf2f6 1px solid;word-wrap:break-word;font-size:0.95em;line-height:1.65em}.post-header{margin-bottom:1rem}.post-title{margin-bottom:0}.post-title a{text-decoration:none}.post-meta{display:block;margin:3px 0 0 0;color:#9eabb3;font-family:"Open Sans", sans-serif;font-size:1.3rem;line-height:2.2rem}.post-meta a{color:#9eabb3;text-decoration:none}.post-meta a:hover{text-decoration:underline}.post-meta .author{margin:0;font-size:1.3rem;line-height:1.3em}.post-date{display:inline-block;text-transform:uppercase;white-space:nowrap;font-size:1.2rem;line-height:1.2em}.post-image{margin:0;padding-top:3rem;padding-bottom:30px;border-top:1px #E8E8E8 solid}.post-content amp-img,.post-content amp-anim{position:relative;left:50%;display:block;padding:0;min-width:0;max-width:112%;width:calc(100% + 32px);height:auto;transform:translateX(-50%);-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%)}.footnotes{font-size:1.3rem;line-height:1.6em;font-style:italic}.footnotes li{margin:0.6rem 0}.footnotes p{margin:0}.footnotes p a:last-child{text-decoration:none}.site-footer{position:relative;margin:0 auto 20px auto;padding:1rem 15px;max-width:600px;color:rgba(0,0,0,0.5);font-family:"Open Sans", sans-serif;font-size:1.1rem;line-height:1.75em}.site-footer a{color:rgba(0,0,0,0.5);text-decoration:none;font-weight:bold}.site-footer a:hover{border-bottom:#bbc7cc 1px solid}.poweredby{display:block;float:right;width:45%;text-align:right}.copyright{display:block;float:left;width:45%}</style>
@@ -96,7 +99,7 @@
 <body class="amp-template">
     <header class="main-header">
         <nav class="blog-title">
-            <a href="../../">e.kallman</a>
+            <a href="../../">Project Journal</a>
         </nav>
     </header>
 
@@ -104,25 +107,28 @@
         <article class="post">
 
             <header class="post-header">
-                <h1 class="post-title">Managing admin settings</h1>
+                <h1 class="post-title">Nixu 2019 CTF Writeup: Plumbing</h1>
                 <section class="post-meta">
-                    <p class="author">by <a href="../../author/ghost/">Ghost</a></p>
-                    <time class="post-date" datetime="2019-03-18">2019-03-18</time>
+                    <p class="author">by <a href="../../author/ekallman/">Erik Källman</a></p>
+                    <time class="post-date" datetime="2019-06-14">2019-06-14</time>
                 </section>
             </header>
             <figure class="post-image">
-                <amp-img src="https://static.ghost.org/v2.0.0/images/admin-settings.jpg" width="600" height="400" layout="responsive"></amp-img>
+                <amp-img src="http://localhost:2368/content/images/2019/06/62475375_353452692028097_5273843763561627648_n.jpg" width="600" height="400" layout="responsive"></amp-img>
             </figure>
             <section class="post-content">
 
-                <p>There are a couple of things to do next while you're getting set up:</p><h1 id="make-your-site-private">Make your site private</h1><p>If you've got a publication that you don't want the world to see yet because it's not ready to launch, you can hide your Ghost site behind a basic shared pass-phrase.</p><p>You can toggle this preference on at the bottom of Ghost's <a href="http://localhost:2368/ghost/settings/general/">General Settings</a>:</p><figure class="kg-card kg-image-card"><amp-img src="https://static.ghost.org/v1.0.0/images/private.png" class="kg-image" width="1400" height="200" layout="responsive"></amp-img></figure><p>Ghost will give you a short, randomly generated pass-phrase which you can share with anyone who needs access to the site while you're working on it. While this setting is enabled, all search engine optimisation features will be switched off to help keep your site under the radar.</p><p>Do remember though, this is <em>not</em> secure authentication. You shouldn't rely on this feature for protecting important private data. It's just a simple, shared pass-phrase for some very basic privacy.</p><hr><h1 id="invite-your-team">Invite your team </h1><p>Ghost has a number of different user roles for your team:</p><p><strong>Contributors</strong><br>This is the base user level in Ghost. Contributors can create and edit their own draft posts, but they are unable to edit drafts of others or publish posts. Contributors are <strong>untrusted</strong> users with the most basic access to your publication.</p><p><strong>Authors</strong><br>Authors are the 2nd user level in Ghost. Authors can write, edit  and publish their own posts. Authors are <strong>trusted</strong> users. If you don't trust users to be allowed to publish their own posts, they should be set as Contributors.</p><p><strong>Editors</strong><br>Editors are the 3rd user level in Ghost. Editors can do everything that an Author can do, but they can also edit and publish the posts of others - as well as their own. Editors can also invite new Contributors+Authors to the site.</p><p><strong>Administrators</strong><br>The top user level in Ghost is Administrator. Again, administrators can do everything that Authors and Editors can do, but they can also edit all site settings and data, not just content. Additionally, administrators have full access to invite, manage or remove any other user of the site.<br><br><strong>The Owner</strong><br>There is only ever one owner of a Ghost site. The owner is a special user which has all the same permissions as an Administrator, but with two exceptions: The Owner can never be deleted. And in some circumstances the owner will have access to additional special settings if applicable. For example: billing details, if using <a href="https://ghost.org/pricing/"><strong>Ghost(Pro)</strong></a>.</p><blockquote><em>It's a good idea to ask all of your users to fill out their user profiles, including bio and social links. These will populate rich structured data for posts and generally create more opportunities for themes to fully populate their design.</em></blockquote><p>Next up: <a href="../../organising-content/">Organising your content</a> </p>
+                <p>In this particular challenge, we need to take a deeper-than-average dive into how Git builds its commit messages. Super cool, and pretty simple. <br><br>As wonderful of a tool git is, this is not stuff we could motivate ourselves to do on our spare time. But if someone were to wrap it into a neat CTF challenge, and provide us with imaginary internet points for completing that challenge, we would have jumped right at it. <br><br>Someone did just that.</p><h2 id="1-introduction">1. Introduction</h2><p>We are presented with a text file containing the return of someone executing running "git log" in terminal:</p><p>commit da38267d15c7f1983cbb34be0dd93e5e0a8b6c3d<br>Author: admin <a>admin@example.com</a><br>Date:   Mon Nov 26 13:13:13 2018 +0200</p><pre><code>Wrap inside NIXU{}
+</code></pre><p>commit 983db0dd8771fcfb236beb8273c014171ffb3cef<br>Author: admin <a>admin@example.com</a><br>Date:   Tue Feb 2 13:13:13 2016 +0200</p><pre><code>Decode phonetic alphabet (lowercase, no whitespace)
+</code></pre><p>And so on, and so forth.</p><p>Supposedly, inside this commit tree hides information on a encryption key to the backups of the system that Nixu garbled. This is all lore of course. Spice to get us in the mood to hack a little. There is no secure key hiding in this burning trash pile of an encryption method. We need to embrace that. </p><p>So, from this sequence of commit messages, and trusting the commit comments, we must work our way through each commit and finally arrive at the key that was garbled.</p><h2 id="2-background">2. Background</h2><p>In all problems of this type, it helps chalking up our answer to asking ourselves "what is known?" without wandering too far towards the philosophical end of that question.</p><p>With the information given to us, this is known:</p><ol><li>A sequence of non negative integers were drawn, one per commit, from a set of "dice distributions": a 1d9, 1d100, and a 1d10000000 (ouch). The drawn numbers were added to the end of a number sequence.</li><li>After the whole sequence of pseudo-random numbers is drawn, a series of operations were applied to change that sequence further.</li><li>The commit messages describe the operations performed. </li><li>The metadata for each commit is provided in the git log print out.</li></ol><p>So far we are dealing with obvious information. However, like many CTF problems, we cannot solve them unless we more or less understand what we are doing. <br><br>The crucial piece of extra information needed here, is that each commit contains a commit hash. This is the SHA1 hash printed after the "commit" word in the commit message, which relates to the content in the directory (we will get back to this). In this challenge, we need to understand that commit hash, and the format of the commit message, to work our way from start to end of that commit tree.</p><h3 id="2-1-the-git-commit-message">2.1 The Git commit message</h3><p>Even though I use git for all my revision control (text, code, what have you), I haven't given the structure of the commit hash much thought. Thankfully, people have already tried to recreate commit hashes and also <a href="https://gist.github.com/masak/2415865">uploaded their struggle to github</a>. In short, the hash contains:</p><ul><li>the number of characters in the commit message </li><li>the tree hash (a hash of the source directory)</li><li>the commit hash of the parent commit (this is omitted if we are at the first commit)</li><li>the author info (name, email, timestamp and timezone) </li><li>committer info (name, email, timestamp and timezone)</li></ul><p>The author and committer information need not be the same, where the author is the user that wrote the data that was committed. However, the user committing that data does not need to be the author, and the authoring does not need to be done at the same time as the commit (yes, this is obvious, but you know what? there it is).</p><figure class="kg-card kg-image-card"></figure><h2 id="3-solution">3. Solution</h2><p>The only unknown piece of information is the tree hash. If we assume that the source directory contains only the file of interest (the flag.txt file), and that the commit comments are truthful, we have a problem that we can brute force and formulate in one sentence:<br><br><em>If we iterate through every possible number in each distribution, and from each new sequence of numbers can generate our own commit message, the correctly drawn number will be identified among our drawn numbers by having the same commit hash as provided in the git log for that specific step in the git tree.</em><br><br>While the implementation may differ, this is the problem we are trying to solve. It is not the smoothest or fastest method, but boy oh boy is it a good feeling waking up in the morning while your computer correctly sampled 17 out of 17*10 000 000 numbers. <br><br>Before dinner we quickly tried to code up an implementation based on simply calling git from python to verify our previous assumptions about the problem. The first few commits produces a sequence that is a few numbers long, and if we got the first commit hash right, we would know if we were on the right track.</p><p>Obviously, this is not a complete solution, due to the extensive i/o and overhead of creating new processes when executing shell commands through python. For shits and giggles, our timing estimate for the worst case scenario landed us in roughly 40 days until completion. Our patience gave us about 1/40th of that time to work with.<br><br>We then proceeded to implement our own commit generator. Thankfully, we found a <a href="https://github.com/chris3torek/scripts/blob/master/githash.py">neat script</a> that could provide us with an algorithm for producing tree hashes, which is the only tricky part in all of this.<br><br>So as the busy monkey that we are, we coded up our little script and waited over night. In the morning we performed the last steps of string garbling to arrive at our flag, at last:</p><p>4B2D656E6C0A787679620A50756E657976720A717279676E0A7A62776E0A476E61620A6776666E0A666E6F6E0A -&gt; K-enl xvyb Puneyvr qrygn zbwn Gnab gvfn fnon -&gt; X-ray kilo Charlie delta moja Tano tisa saba -&gt; X-ray kilo Charlie delta one Five nine seven -&gt; xkcd1597 -&gt; NIXU{xkcd1597}</p>
+<p>What we wrote was not pretty, but neither is translation of a byte string from English to Swahili as a method of encryption. Or was it simply a method to provide a convoluted link to a <a href="https://xkcd.com/1597/">relevant xkcd</a>? The world will never know.</p><p> <br>Anyway,<a href="https://github.com/erikkallman/nixu_2019_ctf"> here is the script.</a><br><br><em><br> </em><br><br></p><p><br><br></p><p></p><p></p><p><br><br></p>
 
             </section>
 
         </article>
     </main>
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="../../">e.kallman</a> © 2019</section>
+        <section class="copyright"><a href="../../">Project Journal</a> © 2019</section>
         <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
     </footer>
 </body>
