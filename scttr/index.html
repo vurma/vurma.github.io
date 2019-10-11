@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Nixu 2019 CTF Writeup: Plumbing</title>
+    <title>Scatter - finally free in the wild</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,30 +17,28 @@
     
     <meta property="og:site_name" content="Project Journal">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Nixu 2019 CTF Writeup: Plumbing">
-    <meta property="og:description" content="In this particular challenge, we need to take a deeper-than-average dive into how Git builds its commit messages. Super cool, and pretty simple. ">
-    <meta property="og:url" content="http://localhost:2368/writeup-plumbing/">
-    <meta property="og:image" content="http://localhost:2368/content/images/2019/06/62475375_353452692028097_5273843763561627648_n.jpg">
-    <meta property="article:published_time" content="2019-06-14T09:48:44.000Z">
-    <meta property="article:modified_time" content="2019-08-16T17:14:34.000Z">
-    <meta property="article:tag" content="Nixu">
-    <meta property="article:tag" content="Write-up">
-    <meta property="article:tag" content="CTF">
-    <meta property="article:tag" content="cyber security">
+    <meta property="og:title" content="Scatter - finally free in the wild">
+    <meta property="og:description" content="If I cannot read the code you used in your publication, I cannot trust the data you publish. ">
+    <meta property="og:url" content="http://localhost:2368/scttr/">
+    <meta property="og:image" content="http://localhost:2368/content/images/2019/10/rixsmaps_v5.png">
+    <meta property="article:published_time" content="2019-10-11T20:56:16.000Z">
+    <meta property="article:modified_time" content="2019-10-11T20:56:51.000Z">
+    <meta property="article:tag" content="scatter">
+    <meta property="article:tag" content="research">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Nixu 2019 CTF Writeup: Plumbing">
-    <meta name="twitter:description" content="In this particular challenge, we need to take a deeper-than-average dive into how Git builds its commit messages. Super cool, and pretty simple. ">
-    <meta name="twitter:url" content="http://localhost:2368/writeup-plumbing/">
-    <meta name="twitter:image" content="http://localhost:2368/content/images/2019/06/62475375_353452692028097_5273843763561627648_n.jpg">
+    <meta name="twitter:title" content="Scatter - finally free in the wild">
+    <meta name="twitter:description" content="If I cannot read the code you used in your publication, I cannot trust the data you publish. ">
+    <meta name="twitter:url" content="http://localhost:2368/scttr/">
+    <meta name="twitter:image" content="http://localhost:2368/content/images/2019/10/rixsmaps_v5.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Erik Källman">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Nixu, Write-up, CTF, cyber security">
+    <meta name="twitter:data2" content="scatter, research">
     <meta name="twitter:site" content="@tryghost">
-    <meta property="og:image:width" content="1440">
-    <meta property="og:image:height" content="910">
+    <meta property="og:image:width" content="2000">
+    <meta property="og:image:height" content="1037">
     
     <script type="application/ld+json">
 {
@@ -68,18 +66,18 @@
         "url": "http://localhost:2368/author/ekallman/",
         "sameAs": []
     },
-    "headline": "Nixu 2019 CTF Writeup: Plumbing",
-    "url": "http://localhost:2368/writeup-plumbing/",
-    "datePublished": "2019-06-14T09:48:44.000Z",
-    "dateModified": "2019-08-16T17:14:34.000Z",
+    "headline": "Scatter - finally free in the wild",
+    "url": "http://localhost:2368/scttr/",
+    "datePublished": "2019-10-11T20:56:16.000Z",
+    "dateModified": "2019-10-11T20:56:51.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:2368/content/images/2019/06/62475375_353452692028097_5273843763561627648_n.jpg",
-        "width": 1440,
-        "height": 910
+        "url": "http://localhost:2368/content/images/2019/10/rixsmaps_v5.png",
+        "width": 2000,
+        "height": 1037
     },
-    "keywords": "Nixu, Write-up, CTF, cyber security",
-    "description": "In this particular challenge, we need to take a deeper-than-average dive into how Git builds its commit messages. Super cool, and pretty simple. ",
+    "keywords": "scatter, research",
+    "description": "If I cannot read the code you used in your publication, I cannot trust the data you publish. ",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -100,7 +98,7 @@
 </script>
 
 </head>
-<body class="post-template tag-nixu tag-write-up tag-ctf tag-cyber-security">
+<body class="post-template tag-scatter tag-research">
 
     <div class="site-wrapper">
 
@@ -137,31 +135,28 @@
 <main id="site-main" class="site-main outer">
     <div class="inner">
 
-        <article class="post-full post tag-nixu tag-write-up tag-ctf tag-cyber-security ">
+        <article class="post-full post tag-scatter tag-research ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="2019-06-14">14 June 2019</time>
-                        <span class="date-divider">/</span> <a href="../tag/nixu/">Nixu</a>
+                    <time class="post-full-meta-date" datetime="2019-10-11">11 October 2019</time>
+                        <span class="date-divider">/</span> <a href="../tag/scatter/">scatter</a>
                 </section>
-                <h1 class="post-full-title">Nixu 2019 CTF Writeup: Plumbing</h1>
+                <h1 class="post-full-title">Scatter - finally free in the wild</h1>
             </header>
 
             <figure class="post-full-image">
-                <img srcset="/content/images/size/w300/2019/06/62475375_353452692028097_5273843763561627648_n.jpg 300w,
-                            /content/images/size/w600/2019/06/62475375_353452692028097_5273843763561627648_n.jpg 600w,
-                            /content/images/size/w1000/2019/06/62475375_353452692028097_5273843763561627648_n.jpg 1000w,
-                            /content/images/size/w2000/2019/06/62475375_353452692028097_5273843763561627648_n.jpg 2000w" sizes="(max-width: 800px) 400px,
+                <img srcset="/content/images/size/w300/2019/10/rixsmaps_v5.png 300w,
+                            /content/images/size/w600/2019/10/rixsmaps_v5.png 600w,
+                            /content/images/size/w1000/2019/10/rixsmaps_v5.png 1000w,
+                            /content/images/size/w2000/2019/10/rixsmaps_v5.png 2000w" sizes="(max-width: 800px) 400px,
                             (max-width: 1170px) 700px,
-                            1400px" src="../content/images/size/w2000/2019/06/62475375_353452692028097_5273843763561627648_n.jpg" alt="Nixu 2019 CTF Writeup: Plumbing">
+                            1400px" src="../content/images/size/w2000/2019/10/rixsmaps_v5.png" alt="Scatter - finally free in the wild">
             </figure>
 
             <section class="post-full-content">
                 <div class="post-content">
-                    <p>In this particular challenge, we need to take a deeper-than-average dive into how Git builds its commit messages. Super cool, and pretty simple. <br><br>As wonderful of a tool git is, this is not stuff we could motivate ourselves to do on our spare time. But if someone were to wrap it into a neat CTF challenge, and provide us with imaginary internet points for completing that challenge, we would have jumped right at it. <br><br>Someone did just that.</p><h2 id="1-introduction">1. Introduction</h2><p>We are presented with a text file containing the return of someone executing running "git log" in terminal:</p><p>commit da38267d15c7f1983cbb34be0dd93e5e0a8b6c3d<br>Author: admin <a>admin@example.com</a><br>Date:   Mon Nov 26 13:13:13 2018 +0200</p><!--kg-card-begin: code--><pre><code>Wrap inside NIXU{}
-</code></pre><!--kg-card-end: code--><p>commit 983db0dd8771fcfb236beb8273c014171ffb3cef<br>Author: admin <a>admin@example.com</a><br>Date:   Tue Feb 2 13:13:13 2016 +0200</p><!--kg-card-begin: code--><pre><code>Decode phonetic alphabet (lowercase, no whitespace)
-</code></pre><!--kg-card-end: code--><p>And so on, and so forth.</p><p>Supposedly, inside this commit tree hides information on a encryption key to the backups of the system that Nixu garbled. This is all lore of course. Spice to get us in the mood to hack a little. There is no secure key hiding in this burning trash pile of an encryption method. We need to embrace that. </p><p>So, from this sequence of commit messages, and trusting the commit comments, we must work our way through each commit and finally arrive at the key that was garbled.</p><h2 id="2-background">2. Background</h2><p>In all problems of this type, it helps chalking up our answer to asking ourselves "what is known?" without wandering too far towards the philosophical end of that question.</p><p>With the information given to us, this is known:</p><ol><li>A sequence of non negative integers were drawn, one per commit, from a set of "dice distributions": a 1d9, 1d100, and a 1d10000000 (ouch). The drawn numbers were added to the end of a number sequence.</li><li>After the whole sequence of pseudo-random numbers is drawn, a series of operations were applied to change that sequence further.</li><li>The commit messages describe the operations performed. </li><li>The metadata for each commit is provided in the git log print out.</li></ol><p>So far we are dealing with obvious information. However, like many CTF problems, we cannot solve them unless we more or less understand what we are doing. <br><br>The crucial piece of extra information needed here, is that each commit contains a commit hash. This is the SHA1 hash printed after the "commit" word in the commit message, which relates to the content in the directory (we will get back to this). In this challenge, we need to understand that commit hash, and the format of the commit message, to work our way from start to end of that commit tree.</p><h3 id="2-1-the-git-commit-message">2.1 The Git commit message</h3><p>Even though I use git for all my revision control (text, code, what have you), I haven't given the structure of the commit hash much thought. Thankfully, people have already tried to recreate commit hashes and also <a href="https://gist.github.com/masak/2415865">uploaded their struggle to github</a>. In short, the hash contains:</p><ul><li>the number of characters in the commit message </li><li>the tree hash (a hash of the source directory)</li><li>the commit hash of the parent commit (this is omitted if we are at the first commit)</li><li>the author info (name, email, timestamp and timezone) </li><li>committer info (name, email, timestamp and timezone)</li></ul><p>The author and committer information need not be the same, where the author is the user that wrote the data that was committed. However, the user committing that data does not need to be the author, and the authoring does not need to be done at the same time as the commit (yes, this is obvious, but you know what? there it is).</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card"><img src="../content/images/2019/06/64206059_468964043911766_5457677533585604608_n.jpg" class="kg-image"></figure><!--kg-card-end: image--><h2 id="3-solution">3. Solution</h2><p>The only unknown piece of information is the tree hash. If we assume that the source directory contains only the file of interest (the flag.txt file), and that the commit comments are truthful, we have a problem that we can brute force and formulate in one sentence:<br><br><em>If we iterate through every possible number in each distribution, and from each new sequence of numbers can generate our own commit message, the correctly drawn number will be identified among our drawn numbers by having the same commit hash as provided in the git log for that specific step in the git tree.</em><br><br>While the implementation may differ, this is the problem we are trying to solve. It is not the smoothest or fastest method, but boy oh boy is it a good feeling waking up in the morning while your computer correctly sampled 17 out of 17*10 000 000 numbers. <br><br>Before dinner we quickly tried to code up an implementation based on simply calling git from python to verify our previous assumptions about the problem. The first few commits produces a sequence that is a few numbers long, and if we got the first commit hash right, we would know if we were on the right track.</p><p>Obviously, this is not a complete solution, due to the extensive i/o and overhead of creating new processes when executing shell commands through python. For shits and giggles, our timing estimate for the worst case scenario landed us in roughly 40 days until completion. Our patience gave us about 1/40th of that time to work with.<br><br>We then proceeded to implement our own commit generator. Thankfully, we found a <a href="https://github.com/chris3torek/scripts/blob/master/githash.py">neat script</a> that could provide us with an algorithm for producing tree hashes, which is the only tricky part in all of this.<br><br>So as the busy monkey that we are, we coded up our little script and waited over night. In the morning we performed the last steps of string garbling to arrive at our flag, at last:</p><!--kg-card-begin: markdown--><p>4B2D656E6C0A787679620A50756E657976720A717279676E0A7A62776E0A476E61620A6776666E0A666E6F6E0A -&gt; K-enl xvyb Puneyvr qrygn zbwn Gnab gvfn fnon -&gt; X-ray kilo Charlie delta moja Tano tisa saba -&gt; X-ray kilo Charlie delta one Five nine seven -&gt; xkcd1597 -&gt; NIXU{xkcd1597}</p>
-<!--kg-card-end: markdown--><p>What we wrote was not pretty, but neither is translation of a byte string from English to Swahili as a method of encryption. Or was it simply a method to provide a convoluted link to a <a href="https://xkcd.com/1597/">relevant xkcd</a>? The world will never know.</p><p> <br>Anyway,<a href="https://github.com/erikkallman/nixu_2019_ctf"> here is the script.</a><br><br><em><br> </em><br><br></p><p><br><br></p><p></p><p></p><p><br><br></p>
+                    <p>One problem with writing code in academia is people don’t make research careers on write good code.</p><p>In fact, be surprised if anyone mentions your code at all. To a large extent what matters is if your code, in the immediate future, helps you get more science produced. This creates a situation where larger code bases are written in patch-work fashion on top of the previous generations of often times completely undocumented and poorly formatted, custom by-some-hacky-makescript-built code. Furthermore, only rarely is there anything resembling code review.</p><p>Yet still, science depends on its code being transparently <strong>accessible</strong>, <strong>readable</strong>,  and <strong>maintainable</strong>. These points cannot be overemphesized. If I cannot read the code you used in your publication, I cannot trust the data you publish. Further more, often times licensing is completely missing, even though lots of research gets funded by tax-payer money. </p><p>So with that I use this saturday glass of wine to perform a quiet protest in publishing a tool i have been using that goes halfway on the problems mentioned. </p><p>Scatter is the tool I have been iterating over during the past years to generate RIXS (Resonant Inelastic X-ray Scattering) maps for transition metal complexes - a large part of my research for the past four years. </p><p><a href="https://github.com/erikkallman/scttr">Here is a link to its repository. </a></p><p>If you spend some time looking over the code and tell me what you think about it, I'll give you free lunch.</p><p> </p>
                 </div>
             </section>
 
@@ -195,26 +190,27 @@
     <div class="inner">
         <div class="read-next-feed">
 
-                <article class="post-card post tag-scatter tag-research ">
 
-    <a class="post-card-image-link" href="../scttr/">
-        <img class="post-card-image" srcset="/content/images/size/w300/2019/10/rixsmaps_v5.png 300w,
-                    /content/images/size/w600/2019/10/rixsmaps_v5.png 600w,
-                    /content/images/size/w1000/2019/10/rixsmaps_v5.png 1000w,
-                    /content/images/size/w2000/2019/10/rixsmaps_v5.png 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../content/images/size/w600/2019/10/rixsmaps_v5.png" alt="Scatter - finally free in the wild">
+                <article class="post-card post tag-nixu tag-write-up tag-ctf tag-cyber-security ">
+
+    <a class="post-card-image-link" href="../writeup-plumbing/">
+        <img class="post-card-image" srcset="/content/images/size/w300/2019/06/62475375_353452692028097_5273843763561627648_n.jpg 300w,
+                    /content/images/size/w600/2019/06/62475375_353452692028097_5273843763561627648_n.jpg 600w,
+                    /content/images/size/w1000/2019/06/62475375_353452692028097_5273843763561627648_n.jpg 1000w,
+                    /content/images/size/w2000/2019/06/62475375_353452692028097_5273843763561627648_n.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../content/images/size/w600/2019/06/62475375_353452692028097_5273843763561627648_n.jpg" alt="Nixu 2019 CTF Writeup: Plumbing">
     </a>
 
     <div class="post-card-content">
 
-        <a class="post-card-content-link" href="../scttr/">
+        <a class="post-card-content-link" href="../writeup-plumbing/">
 
             <header class="post-card-header">
-                    <span class="post-card-tags">scatter</span>
-                <h2 class="post-card-title">Scatter - finally free in the wild</h2>
+                    <span class="post-card-tags">Nixu</span>
+                <h2 class="post-card-title">Nixu 2019 CTF Writeup: Plumbing</h2>
             </header>
 
             <section class="post-card-excerpt">
-                <p>If I cannot read the code you used in your publication, I cannot trust the data you publish.</p>
+                <p>In this particular challenge, we need to take a deeper-than-average dive into how Git builds its commit messages. Super cool, and pretty simple.</p>
             </section>
 
         </a>
@@ -234,14 +230,13 @@
                 </li>
             </ul>
 
-            <span class="reading-time">1 min read</span>
+            <span class="reading-time">4 min read</span>
 
         </footer>
 
     </div>
 
 </article>
-
 
         </div>
     </div>
@@ -254,16 +249,16 @@
         </a>
     </div>
     <span class="floating-header-divider">—</span>
-    <div class="floating-header-title">Nixu 2019 CTF Writeup: Plumbing</div>
+    <div class="floating-header-title">Scatter - finally free in the wild</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"></path>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Nixu%202019%20CTF%20Writeup%3A%20Plumbing&amp;url=http://localhost:2368/writeup-plumbing/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Scatter%20-%20finally%20free%20in%20the%20wild&amp;url=http://localhost:2368/scttr/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/writeup-plumbing/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/scttr/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg>
         </a>
     </div>
