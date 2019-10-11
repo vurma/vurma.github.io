@@ -16,27 +16,23 @@
     <meta property="og:title" content="Nixu 2019 CTF Writeup: Plumbing">
     <meta property="og:description" content="In this particular challenge, we need to take a deeper-than-average dive into how Git builds its commit messages. Super cool, and pretty simple. ">
     <meta property="og:url" content="http://localhost:2368/writeup-plumbing/">
-    <meta property="og:image" content="http://localhost:2368/content/images/2019/06/62475375_353452692028097_5273843763561627648_n.jpg">
     <meta property="article:published_time" content="2019-06-14T09:48:44.000Z">
-    <meta property="article:modified_time" content="2019-08-16T17:14:34.000Z">
+    <meta property="article:modified_time" content="2019-10-11T21:05:49.000Z">
     <meta property="article:tag" content="Nixu">
     <meta property="article:tag" content="Write-up">
     <meta property="article:tag" content="CTF">
     <meta property="article:tag" content="cyber security">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Nixu 2019 CTF Writeup: Plumbing">
     <meta name="twitter:description" content="In this particular challenge, we need to take a deeper-than-average dive into how Git builds its commit messages. Super cool, and pretty simple. ">
     <meta name="twitter:url" content="http://localhost:2368/writeup-plumbing/">
-    <meta name="twitter:image" content="http://localhost:2368/content/images/2019/06/62475375_353452692028097_5273843763561627648_n.jpg">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Erik Källman">
     <meta name="twitter:label2" content="Filed under">
     <meta name="twitter:data2" content="Nixu, Write-up, CTF, cyber security">
     <meta name="twitter:site" content="@tryghost">
-    <meta property="og:image:width" content="1440">
-    <meta property="og:image:height" content="910">
     
     <script type="application/ld+json">
 {
@@ -67,13 +63,7 @@
     "headline": "Nixu 2019 CTF Writeup: Plumbing",
     "url": "http://localhost:2368/writeup-plumbing/",
     "datePublished": "2019-06-14T09:48:44.000Z",
-    "dateModified": "2019-08-16T17:14:34.000Z",
-    "image": {
-        "@type": "ImageObject",
-        "url": "http://localhost:2368/content/images/2019/06/62475375_353452692028097_5273843763561627648_n.jpg",
-        "width": 1440,
-        "height": 910
-    },
+    "dateModified": "2019-10-11T21:05:49.000Z",
     "keywords": "Nixu, Write-up, CTF, cyber security",
     "description": "In this particular challenge, we need to take a deeper-than-average dive into how Git builds its commit messages. Super cool, and pretty simple. ",
     "mainEntityOfPage": {
@@ -113,9 +103,6 @@
                     <time class="post-date" datetime="2019-06-14">2019-06-14</time>
                 </section>
             </header>
-            <figure class="post-image">
-                <amp-img src="http://localhost:2368/content/images/2019/06/62475375_353452692028097_5273843763561627648_n.jpg" width="600" height="400" layout="responsive"></amp-img>
-            </figure>
             <section class="post-content">
 
                 <p>In this particular challenge, we need to take a deeper-than-average dive into how Git builds its commit messages. Super cool, and pretty simple. <br><br>As wonderful of a tool git is, this is not stuff we could motivate ourselves to do on our spare time. But if someone were to wrap it into a neat CTF challenge, and provide us with imaginary internet points for completing that challenge, we would have jumped right at it. <br><br>Someone did just that.</p><h2 id="1-introduction">1. Introduction</h2><p>We are presented with a text file containing the return of someone executing running "git log" in terminal:</p><p>commit da38267d15c7f1983cbb34be0dd93e5e0a8b6c3d<br>Author: admin <a>admin@example.com</a><br>Date:   Mon Nov 26 13:13:13 2018 +0200</p><pre><code>Wrap inside NIXU{}
